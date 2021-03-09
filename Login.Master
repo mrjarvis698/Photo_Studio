@@ -13,7 +13,9 @@
     <form id="form1" runat="server">
         <div class="page">
             <div class="header">
+                <div class="spaceholder">
 
+                    PhotoStudio.</div>
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

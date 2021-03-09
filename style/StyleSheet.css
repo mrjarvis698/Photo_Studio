@@ -15,3 +15,11 @@
     background: #4b6c9e;
     width: 100%;
 }
+
+.spaceholder {
+    font-size: 5em;
+    display: block;
+    padding: 10px;
+    color: White;
+    height: 136px;
+}
