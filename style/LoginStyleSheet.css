@@ -7,3 +7,20 @@
 .loginfield {
 
 }
+
+.tableform {
+}
+
+.tbleft {
+    text-align: right;
+    width: 230px;
+}
+
+.tbcenter {
+    text-align: center;
+    width: 140px;
+}
+
+.tbright {
+    text-align: left;
+}

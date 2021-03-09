@@ -9,44 +9,44 @@
 
                     <table class="tableform">
                         <tr>
-                            <td>
+                            <td class="tbleft">
                                 <asp:Label ID="LoginEmailLabel" runat="server" Text="Email"></asp:Label>
                             </td>
-                            <td>
+                            <td class="tbcenter">
                                 <asp:TextBox ID="LoginEmailTextBox" runat="server"></asp:TextBox>
                             </td>
-                            <td>
+                            <td class="tbright">
                                 <asp:RequiredFieldValidator ID="LoginEmailRequiredFieldValidator" runat="server" ControlToValidate="LoginEmailTextBox" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                                 <asp:RegularExpressionValidator ID="LoginEmailRegularExpressionValidator" runat="server" ControlToValidate="LoginEmailTextBox" ErrorMessage="Invalid Email." ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td class="tbleft">
                                 <asp:Label ID="LoginPasswordLabel" runat="server" Text="Password"></asp:Label>
                             </td>
-                            <td>
+                            <td class="tbcenter">
                                 <asp:TextBox ID="LoginPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
                             </td>
-                            <td>
+                            <td class="tbright">
                                 <asp:RequiredFieldValidator ID="LoginPasswordRequiredFieldValidator" runat="server" ControlToValidate="LoginPasswordTextBox" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>
+                            <td class="tbleft"></td>
+                            <td class="tbcenter">
                                 <asp:Button ID="Button1" runat="server" Text="Login" />
                             </td>
-                            <td>&nbsp;</td>
+                            <td class="tbright"></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td class="tbleft">&nbsp;</td>
+                            <td class="tbcenter">&nbsp;</td>
+                            <td class="tbright">&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td class="tbleft">&nbsp;</td>
+                            <td class="tbcenter">&nbsp;</td>
+                            <td class="tbright">&nbsp;</td>
                         </tr>
                     </table>
 
