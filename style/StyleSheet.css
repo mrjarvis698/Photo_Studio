@@ -7,3 +7,11 @@
     margin: 20px auto 0px auto;
     border: 1px solid #496077;
 }
+
+.header {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+}
