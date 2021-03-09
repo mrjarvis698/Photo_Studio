@@ -22,6 +22,16 @@ namespace Photo_Studio
             conn.Open();
             String str = "INSERT INTO USERS (name,address,contact,email,password) VALUES ('" + SignupNameTextBox.Text + "','" + SignupAddressTextBox.Text + "','" + SignupContactTextBox.Text + "','" + SignupEmailTextBox.Text + "','" + SignupPasswordTextBox.Text + "')";
             SqlCommand cmd = new SqlCommand(str, conn);
+            int OBJ = Convert.ToInt32(cmd.ExecuteNonQuery());
+            if (OBJ > 0)
+            {
+                registrationlb.Text = "Sucessfully Registered";
+            }
+            else
+            {
+                registrationlb.Text = "Registration Failed";
+            }
+
             conn.Close();
         }
     }
