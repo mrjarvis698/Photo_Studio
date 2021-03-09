@@ -22,7 +22,7 @@
                     <div class="contentplaceholder">
                         <table class="tableform">
                             <tr>
-                                <td>&nbsp;</td>
+                                <td class="tableform1">&nbsp;</td>
                                 <td>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
