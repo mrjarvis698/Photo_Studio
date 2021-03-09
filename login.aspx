@@ -34,14 +34,16 @@
                         <tr>
                             <td class="tbleft"></td>
                             <td class="tbcenter">
-                                <asp:Button ID="Button1" runat="server" Text="Login" />
+                                <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
                             </td>
                             <td class="tbright"></td>
                         </tr>
                         <tr>
                             <td class="tbleft">&nbsp;</td>
                             <td class="tbcenter">&nbsp;</td>
-                            <td class="tbright">&nbsp;</td>
+                            <td class="tbright">
+                                <asp:Label ID="LoginLabel" runat="server" ForeColor="Red"></asp:Label>
+                            </td>
                         </tr>
                         <tr>
                             <td class="tbleft">&nbsp;</td>
