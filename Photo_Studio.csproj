@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="login.aspx" />
+    <Content Include="signup.aspx" />
     <Content Include="style\LoginStyleSheet.css" />
     <Content Include="style\StyleSheet.css" />
     <Content Include="App_Data\Photo_studio_database.mdf" />
@@ -92,6 +93,13 @@
       <DependentUpon>Login.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Login.Master" />
