@@ -40,7 +40,7 @@
                         <asp:Label ID="Label2" runat="server" Text="Product Description -"></asp:Label>
                     </td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" runat="server" TextMode="MultiLine"></asp:TextBox>
                     </td>
                     <td class="auto-style4">&nbsp;</td>
                 </tr>
@@ -49,16 +49,18 @@
                         <asp:Label ID="Label3" runat="server" Text="Product Price -"></asp:Label>
                     </td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="TextBox3" runat="server" TextMode="Number"></asp:TextBox>
                     </td>
                     <td class="auto-style4">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td class="auto-style3">
-                        <asp:Button ID="Button1" runat="server" Text="Add" />
+                        <asp:Button ID="Button1" runat="server" Text="Add" OnClick="Button1_Click" />
                     </td>
-                    <td class="auto-style4">&nbsp;</td>
+                    <td class="auto-style4">
+                        <asp:Label ID="registrationlb" runat="server"></asp:Label>
+                    </td>
                 </tr>
             </table>
         </div>
