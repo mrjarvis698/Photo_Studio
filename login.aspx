@@ -39,7 +39,8 @@
                             <td class="tbright"></td>
                         </tr>
                         <tr>
-                            <td class="tbleft">&nbsp;</td>
+                            <td class="tbleft">Not Register?<asp:HyperLink ID="LoginSignupHyperLink" runat="server" EnableTheming="True" NavigateUrl="~/signup.aspx">Signup</asp:HyperLink>
+                            </td>
                             <td class="tbcenter">&nbsp;</td>
                             <td class="tbright">
                                 <asp:Label ID="LoginLabel" runat="server" ForeColor="Red"></asp:Label>

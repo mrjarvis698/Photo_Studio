@@ -1,6 +1,25 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Login.Master" AutoEventWireup="true" CodeBehind="signup.aspx.cs" Inherits="Photo_Studio.signup" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">    
     <link href="style/LoginStyleSheet.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            text-align: right;
+            width: 230px;
+            height: 26px;
+        }
+        .auto-style3 {
+            text-align: center;
+            width: 140px;
+            height: 26px;
+        }
+        .auto-style4 {
+            text-align: left;
+            height: 26px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="loginform">
@@ -81,13 +100,13 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="tbleft">
+                            <td class="auto-style2">
                                 <asp:Label ID="Label4" runat="server" Text="Confirm Password"></asp:Label>
                             </td>
-                            <td class="tbcenter">
+                            <td class="auto-style3">
                                 <asp:TextBox ID="SignupConfirmPasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
                             </td>
-                            <td class="tbright">
+                            <td class="auto-style4">
                                 <asp:CompareValidator ID="SignupConfirmPasswordCompareValidator" runat="server" ControlToCompare="SignupPasswordTextBox" ControlToValidate="SignupConfirmPasswordTextBox" ErrorMessage="Password Not Matched." ForeColor="Red"></asp:CompareValidator>
                             </td>
                         </tr>
@@ -97,7 +116,17 @@
                                 <asp:Button ID="SignupButton" runat="server" Text="Signup" OnClick="SignupButton_Click" />
                             </td>
                             <td class="tbright">
-                                <asp:Label ID="registrationlb" runat="server"></asp:Label>
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="tbleft">Already Registered?<asp:HyperLink ID="SignupLoginHyperLink" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink>
+                            </td>
+                            <td class="tbcenter">&nbsp;</td>
+                            <td  class="tbright">
+                                <asp:Label ID="registrationlb" runat="server" ForeColor="Red"></asp:Label>
                             </td>
                         </tr>
                     </table>

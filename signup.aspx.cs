@@ -25,13 +25,12 @@ namespace Photo_Studio
             int OBJ = Convert.ToInt32(cmd.ExecuteNonQuery());
             if (OBJ > 0)
             {
-                registrationlb.Text = "Sucessfully Registered";
+                registrationlb.Text = "Sucessfully Registered. Please Login.";
             }
             else
             {
                 registrationlb.Text = "Registration Failed";
             }
-
             conn.Close();
         }
     }

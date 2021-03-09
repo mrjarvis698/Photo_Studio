@@ -37,7 +37,7 @@ namespace Photo_Studio
             }
             else
             {
-                LoginLabel.Text = "Your username and word is incorrect";
+                LoginLabel.Text = "Incorrect Details / Please Register.";
             }
         }
     }
