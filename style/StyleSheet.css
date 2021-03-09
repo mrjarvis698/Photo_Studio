@@ -1,2 +1,9 @@
 ﻿body {
 }
+
+.page {
+    width: 960px;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
