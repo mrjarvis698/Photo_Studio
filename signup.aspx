@@ -94,9 +94,11 @@
                         <tr>
                             <td class="tbleft">&nbsp;</td>
                             <td class="tbcenter">
-                                <asp:Button ID="SignupButton" runat="server" Text="Signup" />
+                                <asp:Button ID="SignupButton" runat="server" Text="Signup" OnClick="SignupButton_Click" />
                             </td>
-                            <td class="tbright">&nbsp;</td>
+                            <td class="tbright">
+                                <asp:Label ID="registrationlb" runat="server"></asp:Label>
+                            </td>
                         </tr>
                     </table>
 
