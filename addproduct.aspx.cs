@@ -22,7 +22,6 @@ namespace Photo_Studio
             conn.Open();
             String str = "INSERT INTO Products (ProductName,ProductDescription,ProductPrice) VALUES ('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "')";
             SqlCommand cmd = new SqlCommand(str, conn);
-            conn.Close();
             int OBJ = Convert.ToInt32(cmd.ExecuteNonQuery());
             if (OBJ > 0)
             {
