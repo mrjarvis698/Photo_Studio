@@ -21,6 +21,11 @@
     width: 140px;
 }
 
+.tbcenter1 {
+    text-align: center;
+    width: 100%;
+}
+
 .tbright {
     text-align: left;
 }

@@ -5,8 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="loginform">
         <fieldset class="loginfield">
-                    <legend>Add Product</legend>
-
+                    <legend>Add Products</legend>
                     <table class="tableform">
                         <tr>
                             <td class="tbleft">
@@ -56,7 +55,25 @@
                             <td class="tbright">&nbsp;</td>
                         </tr>
                     </table>
-
+        </fieldset>        
+        <fieldset class="loginfield">
+                    <legend>View Products</legend>
+            <table class="tableform">
+                        <tr>
+                            <td class="tbcenter1">
+                                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="gridviewofPRODUCTTABLE" Width="671px">
+                                    <Columns>
+                                        <asp:CommandField ShowSelectButton="True" />
+                                        <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                                        <asp:BoundField DataField="productname" HeaderText="productname" SortExpression="productname" />
+                                        <asp:BoundField DataField="productdescription" HeaderText="productdescription" SortExpression="productdescription" />
+                                        <asp:BoundField DataField="productprice" HeaderText="productprice" SortExpression="productprice" />
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="gridviewofPRODUCTTABLE" runat="server" ConnectionString="<%$ ConnectionStrings:Photostudiodb %>" SelectCommand="SELECT * FROM [PRODUCTS]"></asp:SqlDataSource>
+                            </td>
+                        </tr>
+            </table>
         </fieldset>
     </div>
 </asp:Content>
