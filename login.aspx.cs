@@ -31,6 +31,14 @@ namespace Photo_Studio
             sda.Fill(dt);
             int i = cmd.ExecuteNonQuery();
             conn.Close();
+            if (dt.Rows.Count > 0)
+            {
+                LoginLabel.Text = "Your username and word is correct";
+            }
+            else
+            {
+                LoginLabel.Text = "Your username and word is incorrect";
+            }
         }
     }
 }
