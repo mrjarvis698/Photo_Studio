@@ -77,6 +77,9 @@
     <Content Include="App_Data\Photo_studio_database_log.ldf">
       <DependentUpon>Photo_studio_database.mdf</DependentUpon>
     </Content>
+    <Content Include="user\products.aspx" />
+    <Content Include="user\useraccount.aspx" />
+    <Content Include="user\userorderlist.aspx" />
     <Content Include="user\userwelcome.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -130,6 +133,27 @@
     </Compile>
     <Compile Include="User.Master.designer.cs">
       <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="user\products.aspx.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\products.aspx.designer.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\useraccount.aspx.cs">
+      <DependentUpon>useraccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\useraccount.aspx.designer.cs">
+      <DependentUpon>useraccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\userorderlist.aspx.cs">
+      <DependentUpon>userorderlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\userorderlist.aspx.designer.cs">
+      <DependentUpon>userorderlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\userwelcome.aspx.cs">
       <DependentUpon>userwelcome.aspx</DependentUpon>
