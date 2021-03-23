@@ -33,7 +33,7 @@ namespace Photo_Studio
             conn.Close();
             if (dt.Rows.Count > 0)
             {
-                LoginLabel.Text = "Your username and word is correct";
+                Response.Redirect("~/user/userwelcome.aspx");
             }
             else
             {
