@@ -34,7 +34,7 @@
                         <tr>
                             <td class="tbleft"></td>
                             <td class="tbcenter">
-                                <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
+                                <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" />
                             </td>
                             <td class="tbright"></td>
                         </tr>

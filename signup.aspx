@@ -122,11 +122,11 @@
 
                     <table class="auto-style1">
                         <tr>
-                            <td class="tbleft">Already Registered?<asp:HyperLink ID="SignupLoginHyperLink" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink>
+                            <td class="tbleft"><asp:Label ID="registrationlb" runat="server" ForeColor="Red"></asp:Label>
                             </td>
                             <td class="tbcenter">&nbsp;</td>
                             <td  class="tbright">
-                                <asp:Label ID="registrationlb" runat="server" ForeColor="Red"></asp:Label>
+                                Already Registered?<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink>
                             </td>
                         </tr>
                     </table>

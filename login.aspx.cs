@@ -18,11 +18,11 @@ namespace Photo_Studio
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void LoginButton_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
             conn.Open();
-            String str = "SELECT* FROM USERS WHERE email=@email AND password=@password";
+            String str = "SELECT* FROM USERS WHERE Email=@email AND Password=@password";
             SqlCommand cmd = new SqlCommand(str, conn);
             cmd.Parameters.AddWithValue("@email", LoginEmailTextBox.Text);
             cmd.Parameters.AddWithValue("@password", LoginPasswordTextBox.Text);
