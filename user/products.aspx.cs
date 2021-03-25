@@ -14,14 +14,10 @@ namespace Photo_Studio.user
 
         }
 
-        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
-        {
-
-        }
-
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            GridViewRow gr = GridView1.SelectedRow;
+            Response.Redirect("productview.aspx?Id=" + gr.Cells[0].Text + "&Name=" + gr.Cells[1].Text + "&Price=" + gr.Cells[2].Text);
         }
     }
 }

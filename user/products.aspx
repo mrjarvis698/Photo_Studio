@@ -1,18 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="products.aspx.cs" Inherits="Photo_Studio.user.products" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+    .auto-style1 {
+        width: 376px;
+    }
+    .auto-style2 {
+        width: 102%;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-        products.user
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="679px" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        products.user</p>
+<table class="auto-style2">
+    <tr>
+        <td class="auto-style1">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Width="465px" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                         <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                         <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-                        <asp:CommandField ButtonType="Button" SelectText="View Product" ShowSelectButton="True" />
-                        <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="productview.aspx?Id={0}" Text="View" />
+                        <asp:CommandField ShowSelectButton="True" />
                     </Columns>
                     <EditRowStyle BackColor="#999999" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -25,12 +34,10 @@
                     <SortedDescendingCellStyle BackColor="#FFFDF8" />
                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Photostudiodb %>" SelectCommand="SELECT * FROM [PRODUCTS]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
-    </p>
-    <p>
-        <asp:MultiView ID="MultiView1" runat="server">
-            <asp:View ID="View1" runat="server">
-            </asp:View>
-        </asp:MultiView>
-    </p>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Photostudiodb %>" SelectCommand="SELECT * FROM [PRODUCTS]"></asp:SqlDataSource>
+        </td>
+        <td>
+            &nbsp;</td>
+    </tr>
+</table>
 </asp:Content>

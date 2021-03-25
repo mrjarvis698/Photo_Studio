@@ -8,6 +8,11 @@
     <link href="~/style/StyleSheet.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 111px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -22,7 +27,7 @@
                     <div class="contentplaceholder">
                         <table class="tableform">
                             <tr>
-                                <td class="tableform1">
+                                <td class="auto-style1">
                                     <asp:TreeView ID="TreeView1" runat="server">
                                         <Nodes>
                                             <asp:TreeNode NavigateUrl="~/user/userwelcome.aspx" Text="Home" Value="Home"></asp:TreeNode>
