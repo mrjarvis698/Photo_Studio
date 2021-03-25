@@ -7,7 +7,10 @@
     .auto-style2 {
         width: 102%;
     }
-</style>
+        .auto-style3 {
+            width: 111px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
@@ -37,7 +40,48 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Photostudiodb %>" SelectCommand="SELECT * FROM [PRODUCTS]"></asp:SqlDataSource>
         </td>
         <td>
-            &nbsp;</td>
+            <table class="tableform">
+                <tr>
+                    <td class="auto-style3">
+                        <asp:Label ID="ProductNameLabel" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="ProductNameSqlLabel" runat="server"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">
+                        <asp:Label ID="ProductDescriptionLabel" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="ProductDescriptionSqlLabel" runat="server"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">
+                        <asp:Label ID="ProductPriceLabel" runat="server"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="ProductPriceSqlLabel" runat="server"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">
+                        <asp:Label ID="QuantityLabel" runat="server"></asp:Label>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </td>
     </tr>
 </table>
 </asp:Content>

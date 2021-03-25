@@ -78,7 +78,6 @@
       <DependentUpon>Photo_studio_database.mdf</DependentUpon>
     </Content>
     <Content Include="user\products.aspx" />
-    <Content Include="user\productview.aspx" />
     <Content Include="user\useraccount.aspx" />
     <Content Include="user\userorderlist.aspx" />
     <Content Include="user\userwelcome.aspx" />
@@ -141,13 +140,6 @@
     </Compile>
     <Compile Include="user\products.aspx.designer.cs">
       <DependentUpon>products.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="user\productview.aspx.cs">
-      <DependentUpon>productview.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="user\productview.aspx.designer.cs">
-      <DependentUpon>productview.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\useraccount.aspx.cs">
       <DependentUpon>useraccount.aspx</DependentUpon>
