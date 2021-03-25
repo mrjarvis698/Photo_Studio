@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace Photo_Studio.user
 {
@@ -21,12 +24,35 @@ namespace Photo_Studio.user
             string Name = gr.Cells[1].Text;
             string Price = gr.Cells[2].Text;
             ProductNameLabel.Text = "Product Name -";
-            ProductDescriptionLabel.Text = "Product Description -";
+            ProductDescriptionLabel.Text = "Description -";
             ProductPriceLabel.Text = "Product Price - ₹";
             QuantityLabel.Text = "Quantity -";
             ProductNameSqlLabel.Text = Name;
-            ProductDescriptionSqlLabel.Text = Id;
             ProductPriceSqlLabel.Text = Price;
+
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
+            conn.Open();
+            String str = "SELECT* FROM PRODUCTS WHERE Name=@name";
+            SqlCommand cmd = new SqlCommand(str, conn);
+            cmd.Parameters.AddWithValue("@name", gr.Cells[1].Text);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            int i = cmd.ExecuteNonQuery();
+            conn.Close();
+            if (dt.Rows.Count > 0)
+            {
+                SqlConnection connn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
+                connn.Open();
+                SqlCommand cmdd = new SqlCommand("SELECT Description from PRODUCTS where Id=" + gr.Cells[0].Text, connn);
+                using (SqlDataReader sdr = cmdd.ExecuteReader())
+                {
+                    sdr.Read();
+                    ProductDescriptionSqlLabel.Text = sdr["Description"].ToString();
+                }
+
+                connn.Close();
+            }
         }
     }
 }
