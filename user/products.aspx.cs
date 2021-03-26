@@ -66,6 +66,20 @@ namespace Photo_Studio.user
         protected void AddToCartButton_Click(object sender, EventArgs e)
         {
 
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
+            conn.Open();
+            String str = "INSERT INTO ORDERLIST (Product,Price,Quantity) VALUES ('" + ProductNameSqlLabel.Text + "','" + ProductPriceSqlLabel.Text + "','" + QuantityTextBox.Text + "')";
+            SqlCommand cmd = new SqlCommand(str, conn);
+            int OBJ = Convert.ToInt32(cmd.ExecuteNonQuery());
+            if (OBJ > 0)
+            {
+                CartLabel.Text = "Added Product To Your Cart";
+            }
+            else
+            {
+                CartLabel.Text = "SomeThing Went Wrong";
+            }
+            conn.Close();
         }
     }
 }

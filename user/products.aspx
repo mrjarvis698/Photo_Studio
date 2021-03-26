@@ -51,6 +51,15 @@
                     <td>&nbsp;</td>
                 </tr>
             </table>
+            <table class="tableform">
+                <tr>
+                    <td style="width: 194px">
+                        &nbsp;</td>
+                    <td>
+                        <asp:Label ID="CartLabel" runat="server" ForeColor="Red"></asp:Label>
+                    </td>
+                </tr>
+            </table>
         </fieldset><br />
         <br />
 &nbsp;<fieldset class="auto-style5" style="width: 675px">
