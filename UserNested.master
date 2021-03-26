@@ -11,6 +11,15 @@
         </Nodes>
     </asp:TreeView>
 </asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+                <div class="auto-style1">
+                    <asp:Label ID="UsernameLabel" runat="server" ForeColor="White"></asp:Label>
+                    <asp:LinkButton ID="LoginButton" runat="server" PostBackUrl="~/login.aspx" Text="Login" />
+                    &nbsp;<asp:LinkButton ID="LogoutButton" runat="server" PostBackUrl="~/login.aspx" Text="Logout" Visible="False" />
+                    &nbsp;<asp:LinkButton ID="SignupButton" runat="server" PostBackUrl="~/signup.aspx" Text="Signup" />
+                </div>
+</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
     </asp:ContentPlaceHolder>

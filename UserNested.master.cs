@@ -13,5 +13,33 @@ namespace Photo_Studio
         {
 
         }
+        public Label Username
+        {
+            get
+            {
+                return this.UsernameLabel;
+            }
+        }
+        public LinkButton Signup
+        {
+            get
+            {
+                return this.SignupButton;
+            }
+        }
+        public LinkButton login
+        {
+            get
+            {
+                return this.LoginButton;
+            }
+        }
+        public LinkButton Logout
+        {
+            get
+            {
+                return this.LogoutButton;
+            }
+        }
     }
 }

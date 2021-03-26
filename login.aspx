@@ -56,3 +56,9 @@
         </fieldset>
     </div>
 </asp:Content>
+<asp:Content ID="Content3" runat="server" contentplaceholderid="ContentPlaceHolder2">
+</asp:Content>
+<asp:Content ID="Content4" runat="server" contentplaceholderid="ContentPlaceHolder3">
+
+</asp:Content>
+

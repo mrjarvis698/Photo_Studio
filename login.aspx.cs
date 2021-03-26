@@ -33,6 +33,7 @@ namespace Photo_Studio
             conn.Close();
             if (dt.Rows.Count > 0)
             {
+                Session["Username"] = LoginEmailTextBox.Text;
                 Response.Redirect("~/user/userwelcome.aspx");
             }
             else
