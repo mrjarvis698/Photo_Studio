@@ -120,7 +120,7 @@
                         </tr>
                     </table>
 
-                    <table class="auto-style1">
+                    <table class="loginfield">
                         <tr>
                             <td class="tbleft"><asp:Label ID="registrationlb" runat="server" ForeColor="Red"></asp:Label>
                             </td>
