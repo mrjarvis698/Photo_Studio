@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Login.Master" AutoEventWireup="true" CodeBehind="UserNested.master.cs" Inherits="Photo_Studio.UserNested" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <asp:TreeView ID="TreeView1" runat="server">
+        <Nodes>
+            <asp:TreeNode NavigateUrl="~/user/userwelcome.aspx" Text="Home" Value="Home"></asp:TreeNode>
+            <asp:TreeNode NavigateUrl="~/user/useraccount.aspx" Text="Account" Value="Account"></asp:TreeNode>
+            <asp:TreeNode NavigateUrl="~/user/products.aspx" Text="Products" Value="Products"></asp:TreeNode>
+            <asp:TreeNode NavigateUrl="~/user/userorderlist.aspx" Text="Orderlist" Value="Orderlist"></asp:TreeNode>
+        </Nodes>
+    </asp:TreeView>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

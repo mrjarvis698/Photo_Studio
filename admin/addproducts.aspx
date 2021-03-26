@@ -1,8 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="addproducts.aspx.cs" Inherits="Photo_Studio.admin.addproducts" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NestedAdmin.Master" AutoEventWireup="true" CodeBehind="addproducts.aspx.cs" Inherits="Photo_Studio.admin.addproducts" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">    
     <link href="~/style/LoginStyleSheet.css" rel="stylesheet" type="text/css" />
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="loginform">
         <fieldset class="loginfield">
                     <legend>Add Products</legend>
@@ -63,11 +61,11 @@
                             <td class="tbcenter1">
                                 <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="gridviewofPRODUCTTABLE" Width="671px">
                                     <Columns>
-                                        <asp:CommandField ShowSelectButton="True" />
                                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                                        <asp:BoundField DataField="productname" HeaderText="productname" SortExpression="productname" />
-                                        <asp:BoundField DataField="productdescription" HeaderText="productdescription" SortExpression="productdescription" />
-                                        <asp:BoundField DataField="productprice" HeaderText="productprice" SortExpression="productprice" />
+                                        <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
+                                        <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                                        <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+                                        <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
                                     </Columns>
                                 </asp:GridView>
                                 <asp:SqlDataSource ID="gridviewofPRODUCTTABLE" runat="server" ConnectionString="<%$ ConnectionStrings:Photostudiodb %>" SelectCommand="SELECT * FROM [PRODUCTS]"></asp:SqlDataSource>

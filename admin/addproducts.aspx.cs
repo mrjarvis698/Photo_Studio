@@ -20,7 +20,7 @@ namespace Photo_Studio.admin
         {
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
             conn.Open();
-            String str = "INSERT INTO PRODUCTS (productname,productdescription,productprice) VALUES ('" + AddProductNameTextBox.Text + "','" + AddProductDescriptionTextBox.Text + "','" + AddProductPriceTextBox.Text + "')";
+            String str = "INSERT INTO PRODUCTS (Productname,description,price) VALUES ('" + AddProductNameTextBox.Text + "','" + AddProductDescriptionTextBox.Text + "','" + AddProductPriceTextBox.Text + "')";
             SqlCommand cmd = new SqlCommand(str, conn);
             int OBJ = Convert.ToInt32(cmd.ExecuteNonQuery());
             if (OBJ > 0)
