@@ -21,14 +21,14 @@ namespace Photo_Studio.user
         {
             GridViewRow gr = GridView1.SelectedRow;
             string Id = gr.Cells[0].Text;
-            string Name = gr.Cells[1].Text;
+            string ProductName = gr.Cells[1].Text;
             string Price = gr.Cells[2].Text;
-            ProductNameSqlLabel.Text = Name;
+            ProductNameSqlLabel.Text = ProductName;
             ProductPriceSqlLabel.Text = Price;
 
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
             conn.Open();
-            String str = "SELECT* FROM PRODUCTS WHERE Name=@name";
+            String str = "SELECT* FROM PRODUCTS WHERE ProductName=@name";
             SqlCommand cmd = new SqlCommand(str, conn);
             cmd.Parameters.AddWithValue("@name", gr.Cells[1].Text);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
@@ -49,6 +49,11 @@ namespace Photo_Studio.user
 
                 connn.Close();
             }
+        }
+
+        protected void AddToCartButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

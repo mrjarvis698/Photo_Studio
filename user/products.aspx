@@ -59,7 +59,7 @@
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td>
-                        <asp:Button ID="AddToCartButton" runat="server" Text="Add to Cart" />
+                        <asp:Button ID="AddToCartButton" runat="server" OnClick="AddToCartButton_Click" Text="Add to Cart" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
@@ -72,7 +72,7 @@
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                        <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                        <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
                         <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
                         <asp:CommandField ShowSelectButton="True" />
                     </Columns>
