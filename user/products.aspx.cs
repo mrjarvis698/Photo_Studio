@@ -23,10 +23,6 @@ namespace Photo_Studio.user
             string Id = gr.Cells[0].Text;
             string Name = gr.Cells[1].Text;
             string Price = gr.Cells[2].Text;
-            ProductNameLabel.Text = "Product Name -";
-            ProductDescriptionLabel.Text = "Description -";
-            ProductPriceLabel.Text = "Product Price - ₹";
-            QuantityLabel.Text = "Quantity -";
             ProductNameSqlLabel.Text = Name;
             ProductPriceSqlLabel.Text = Price;
 
