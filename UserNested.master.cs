@@ -20,21 +20,21 @@ namespace Photo_Studio
                 return this.UsernameLabel;
             }
         }
-        public LinkButton Signup
+        public Button Signup
         {
             get
             {
                 return this.SignupButton;
             }
         }
-        public LinkButton login
+        public Button login
         {
             get
             {
                 return this.LoginButton;
             }
         }
-        public LinkButton Logout
+        public Button Logout
         {
             get
             {

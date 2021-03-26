@@ -112,5 +112,19 @@ namespace Photo_Studio.user
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new Photo_Studio.UserNested Master
+        {
+            get
+            {
+                return ((Photo_Studio.UserNested)(base.Master));
+            }
+        }
     }
 }

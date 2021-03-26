@@ -39,11 +39,12 @@
                             <td class="tbright"></td>
                         </tr>
                         <tr>
-                            <td class="tbleft">Not Register?<asp:HyperLink ID="LoginSignupHyperLink" runat="server" EnableTheming="True" NavigateUrl="~/signup.aspx">Signup</asp:HyperLink>
+                            <td class="tbleft">
+                                <asp:Label ID="LoginLabel" runat="server" ForeColor="Red"></asp:Label>
                             </td>
                             <td class="tbcenter">&nbsp;</td>
                             <td class="tbright">
-                                <asp:Label ID="LoginLabel" runat="server" ForeColor="Red"></asp:Label>
+                                Not Register?<asp:HyperLink ID="LoginSignupHyperLink" runat="server" EnableTheming="True" NavigateUrl="~/signup.aspx">Signup</asp:HyperLink>
                             </td>
                         </tr>
                         <tr>
@@ -59,6 +60,6 @@
 <asp:Content ID="Content3" runat="server" contentplaceholderid="ContentPlaceHolder2">
 </asp:Content>
 <asp:Content ID="Content4" runat="server" contentplaceholderid="ContentPlaceHolder3">
-
 </asp:Content>
+
 

@@ -87,15 +87,6 @@ namespace Photo_Studio
         protected global::System.Web.UI.WebControls.Button LoginButton;
 
         /// <summary>
-        /// LoginSignupHyperLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LoginSignupHyperLink;
-
-        /// <summary>
         /// LoginLabel control.
         /// </summary>
         /// <remarks>
@@ -103,5 +94,14 @@ namespace Photo_Studio
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LoginLabel;
+
+        /// <summary>
+        /// LoginSignupHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink LoginSignupHyperLink;
     }
 }

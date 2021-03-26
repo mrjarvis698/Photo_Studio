@@ -39,7 +39,7 @@ namespace Photo_Studio
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LoginButton;
+        protected global::System.Web.UI.WebControls.Button LoginButton;
 
         /// <summary>
         /// LogoutButton control.
@@ -48,7 +48,7 @@ namespace Photo_Studio
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LogoutButton;
+        protected global::System.Web.UI.WebControls.Button LogoutButton;
 
         /// <summary>
         /// SignupButton control.
@@ -57,7 +57,7 @@ namespace Photo_Studio
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton SignupButton;
+        protected global::System.Web.UI.WebControls.Button SignupButton;
 
         /// <summary>
         /// ContentPlaceHolder3 control.
