@@ -27,6 +27,17 @@ namespace Photo_Studio.user
                 SqlCommand cmd = new SqlCommand(str, conn);
 
             }
+
+
+            SqlConnection connn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
+            connn.Open();
+            String grid = "SELECT* FROM [dbo].[" + Session["Username"] + "]";
+            SqlCommand cmmd = new SqlCommand(grid, connn);
+            SqlDataReader rdr = cmmd.ExecuteReader();
+            GridView1.DataSource = rdr;
+            GridView1.DataBind();
+            connn.Close();
+
         }
     }
 }
