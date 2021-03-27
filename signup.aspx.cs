@@ -25,6 +25,26 @@ namespace Photo_Studio
             int OBJ = Convert.ToInt32(cmd.ExecuteNonQuery());
             if (OBJ > 0)
             {
+                string query = "IF OBJECT_ID('dbo." + SignupNameTextBox.Text + "', 'U') IS NULL ";
+                query += "BEGIN ";
+                query += "CREATE TABLE [dbo].[" + SignupNameTextBox.Text + "] (";
+                query += "[Id] INT NOT NULL PRIMARY KEY IDENTITY,";
+                query += "[Name] VARCHAR(100) NOT NULL,";
+                query += "[Country] VARCHAR(50) NOT NULL";
+                query += ")";
+                query += " END";
+                string constr = ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString;
+                using (SqlConnection connn = new SqlConnection(constr))
+                {
+                    using (SqlCommand cmmd = new SqlCommand(query))
+                    {
+                        cmmd.Connection = connn;
+                        connn.Open();
+                        cmmd.ExecuteNonQuery();
+                        connn.Close();
+                    }
+                }
+
                 registrationlb.Text = "Sucessfully Registered. Please Login.";
             }
             else
