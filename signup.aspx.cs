@@ -25,9 +25,9 @@ namespace Photo_Studio
             int OBJ = Convert.ToInt32(cmd.ExecuteNonQuery());
             if (OBJ > 0)
             {
-                string query = "IF OBJECT_ID('dbo." + SignupNameTextBox.Text + "', 'U') IS NULL ";
+                string query = "IF OBJECT_ID('dbo." + SignupEmailTextBox.Text + "', 'U') IS NULL ";
                 query += "BEGIN ";
-                query += "CREATE TABLE [dbo].[" + SignupNameTextBox.Text + "] (";
+                query += "CREATE TABLE [dbo].[" + SignupEmailTextBox.Text + "] (";
                 query += "[Id] INT NOT NULL PRIMARY KEY IDENTITY,";
                 query += "[ProductName] NCHAR(20) NOT NULL,";
                 query += "[Description] NCHAR(250) NOT NULL";
