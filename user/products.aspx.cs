@@ -68,16 +68,25 @@ namespace Photo_Studio.user
 
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
             conn.Open();
-            String str = "INSERT INTO ORDERLIST (Product,Price,Quantity) VALUES ('" + ProductNameSqlLabel.Text + "','" + ProductPriceSqlLabel.Text + "','" + QuantityTextBox.Text + "')";
-            SqlCommand cmd = new SqlCommand(str, conn);
-            int OBJ = Convert.ToInt32(cmd.ExecuteNonQuery());
-            if (OBJ > 0)
+            string query = "INSERT INTO [dbo].[" + Session["Username"] + "] (ProductName,Description,Price,Quantity) VALUES ('" + ProductNameSqlLabel.Text + "','" + ProductDescriptionSqlLabel.Text + "', '" + ProductPriceSqlLabel.Text + "', '" + QuantityTextBox.Text + "')";
+            string constr = ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString;
+            using (SqlConnection connn = new SqlConnection(constr))
             {
-                CartLabel.Text = "Added Product To Your Cart";
-            }
-            else
-            {
-                CartLabel.Text = "SomeThing Went Wrong";
+                using (SqlCommand cmmd = new SqlCommand(query))
+                {
+                    cmmd.Connection = connn;
+                    connn.Open();
+                    int OBJ = Convert.ToInt32(cmmd.ExecuteNonQuery());
+                    if (OBJ > 0)
+                    {
+                        CartLabel.Text = "Added To Cart";
+                    }
+                    else
+                    {
+                        CartLabel.Text = "Something is Wrong.";
+                    }
+                    connn.Close();
+                }
             }
             conn.Close();
         }
