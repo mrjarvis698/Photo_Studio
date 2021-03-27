@@ -29,8 +29,10 @@ namespace Photo_Studio
                 query += "BEGIN ";
                 query += "CREATE TABLE [dbo].[" + SignupNameTextBox.Text + "] (";
                 query += "[Id] INT NOT NULL PRIMARY KEY IDENTITY,";
-                query += "[Name] VARCHAR(100) NOT NULL,";
-                query += "[Country] VARCHAR(50) NOT NULL";
+                query += "[ProductName] NCHAR(20) NOT NULL,";
+                query += "[Description] NCHAR(250) NOT NULL";
+                query += "[Price] MONEY NOT NULL";
+                query += "[Quantity] INT NOT NULL";
                 query += ")";
                 query += " END";
                 string constr = ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString;
