@@ -14,6 +14,12 @@ namespace Photo_Studio.user
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!this.IsPostBack)
+            {
+                this.BindGrid();
+            }
+
             if (Session["Username"] != null)
             {
                 Master.Username.Text = "Welcome -" + Session["Username"];
@@ -28,16 +34,33 @@ namespace Photo_Studio.user
 
             }
 
+        }
 
+        private void BindGrid()
+        {
             SqlConnection connn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
             connn.Open();
-            String grid = "SELECT* FROM [dbo].[" + Session["Username"] + "]";
-            SqlCommand cmmd = new SqlCommand(grid, connn);
-            SqlDataReader rdr = cmmd.ExecuteReader();
-            GridView1.DataSource = rdr;
-            GridView1.DataBind();
+            using (SqlCommand cmmd = new SqlCommand("SELECT* FROM [dbo].[" + Session["Username"] + "]"))
+            {
+                using (SqlDataAdapter sda = new SqlDataAdapter())
+                {
+                    cmmd.Connection = connn;
+                    sda.SelectCommand = cmmd;
+                    using (DataTable dt = new DataTable())
+                    {
+                        sda.Fill(dt);
+                        GridView1.DataSource = dt;
+                        GridView1.DataBind();
+                    }
+                }
+            }
             connn.Close();
+        }
 
+        protected void OnPageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            this.BindGrid();
         }
     }
 }
