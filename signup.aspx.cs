@@ -38,10 +38,10 @@ namespace Photo_Studio
             {
                 SqlConnection connn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
                 connn.Open();
-                String strr = "INSERT INTO USERS (UserName,Address,Contact,Email,Password) VALUES ('" + SignupNameTextBox.Text + "','" + SignupAddressTextBox.Text + "','" + SignupContactTextBox.Text + "','" + SignupEmailTextBox.Text + "','" + SignupPasswordTextBox.Text + "')";
+                String strr = "INSERT INTO USERS (UserName,Gender,Address,Contact,Email,Password) VALUES ('" + SignupNameTextBox.Text + "','" + SignupGenderRadioButtonList.SelectedItem.Text + "','" + SignupAddressTextBox.Text + "','" + SignupContactTextBox.Text + "','" + SignupEmailTextBox.Text + "','" + SignupPasswordTextBox.Text + "')";
                 SqlCommand cmmd = new SqlCommand(strr, connn);
-                int OBJ = Convert.ToInt32(cmmd.ExecuteNonQuery());
-                if (OBJ > 0)
+                int a = cmmd.ExecuteNonQuery();
+                if (i != 0)
                 {
                     string query = "IF OBJECT_ID('dbo." + SignupEmailTextBox.Text + "', 'U') IS NULL ";
                     query += "BEGIN ";
@@ -66,7 +66,7 @@ namespace Photo_Studio
                     }
                     registrationlb.Text = "Sucessfully Registered. Please Login.";
                 }
-                conn.Close();
+                connn.Close();
             }
         }
     }
