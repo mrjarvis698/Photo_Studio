@@ -27,6 +27,21 @@ namespace Photo_Studio.user
                 SqlCommand cmd = new SqlCommand(str, conn);
 
             }
+
+            SqlConnection connn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
+            connn.Open();
+            SqlCommand cmdd = new SqlCommand("SELECT* from USERS where Email='" + Session["Username"] + "'", connn);
+            using (SqlDataReader sdr = cmdd.ExecuteReader())
+            {
+                sdr.Read();
+                MyAccountUsernameLabel.Text = sdr["UserName"].ToString();
+                MyAccountGenderLabel.Text = sdr["Gender"].ToString();
+                MyAccountAddressLabel.Text = sdr["Address"].ToString();
+                MyAccountContactLabel.Text = sdr["Contact"].ToString();
+                MyAccountEmailLabel.Text = sdr["Email"].ToString();
+            }
+
+            connn.Close();
         }
     }
 }

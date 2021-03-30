@@ -15,6 +15,51 @@ namespace Photo_Studio.user
     {
 
         /// <summary>
+        /// MyAccountUsernameLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MyAccountUsernameLabel;
+
+        /// <summary>
+        /// MyAccountGenderLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MyAccountGenderLabel;
+
+        /// <summary>
+        /// MyAccountAddressLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MyAccountAddressLabel;
+
+        /// <summary>
+        /// MyAccountContactLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MyAccountContactLabel;
+
+        /// <summary>
+        /// MyAccountEmailLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MyAccountEmailLabel;
+
+        /// <summary>
         /// Master property.
         /// </summary>
         /// <remarks>
