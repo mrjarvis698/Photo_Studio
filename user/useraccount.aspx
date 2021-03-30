@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserNested.Master" AutoEventWireup="true" CodeBehind="useraccount.aspx.cs" Inherits="Photo_Studio.user.useraccount" %>
 <%@ MasterType VirtualPath="~/UserNested.Master" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <p>
-        my account</p>
+    <div class="loginform">
+        <fieldset class="loginfield">
+                    <legend>My Account</legend>
+        </fieldset>
+    </div>
 </asp:Content>
