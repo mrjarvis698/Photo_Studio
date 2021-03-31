@@ -79,6 +79,7 @@
     </Content>
     <Content Include="user\products.aspx" />
     <Content Include="user\useraccount.aspx" />
+    <Content Include="user\usercheckout.aspx" />
     <Content Include="user\userorderlist.aspx" />
     <Content Include="user\userwelcome.aspx" />
     <Content Include="Web.config" />
@@ -147,6 +148,13 @@
     </Compile>
     <Compile Include="user\useraccount.aspx.designer.cs">
       <DependentUpon>useraccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\usercheckout.aspx.cs">
+      <DependentUpon>usercheckout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\usercheckout.aspx.designer.cs">
+      <DependentUpon>usercheckout.aspx</DependentUpon>
     </Compile>
     <Compile Include="user\userorderlist.aspx.cs">
       <DependentUpon>userorderlist.aspx</DependentUpon>
