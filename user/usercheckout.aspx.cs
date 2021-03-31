@@ -88,5 +88,10 @@ namespace Photo_Studio.user
                 TotalPriceLabel.Text = String.Format("{0:c}", totalprice);
             }
         }
+
+        protected void UserCheckoutButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

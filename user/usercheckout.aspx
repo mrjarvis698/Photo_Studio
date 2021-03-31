@@ -68,10 +68,12 @@
                             </td>
                             <td>
                                 <div>
-                                    <Fieldset>
+                                    <Fieldset style="text-align: center">
                                         <legend>Total Price</legend>
                                         <asp:Label ID="TotalPriceLabel" runat="server"></asp:Label>
-                                    </fieldset>
+                                        <br />
+                                        <asp:Button ID="UserCheckoutButton" runat="server" Text="Checkout" OnClick="UserCheckoutButton_Click" />
+                                    </Fieldset>
                                 </div>
                             </td>
                         </tr>
