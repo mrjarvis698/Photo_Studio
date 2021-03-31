@@ -44,7 +44,7 @@
                                     <Fieldset>
                                         <legend>Products</legend>
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowPaging="True"
-    OnPageIndexChanging="OnPageIndexChanging" CellPadding="4" ForeColor="#333333" GridLines="None">
+    OnPageIndexChanging="OnPageIndexChanging" OnRowDataBound="pricedatabound" CellPadding="4" ForeColor="#333333" GridLines="None">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:BoundField DataField="ProductName" HeaderText="ProductName" />
@@ -70,6 +70,7 @@
                                 <div>
                                     <Fieldset>
                                         <legend>Total Price</legend>
+                                        <asp:Label ID="TotalPriceLabel" runat="server"></asp:Label>
                                     </fieldset>
                                 </div>
                             </td>

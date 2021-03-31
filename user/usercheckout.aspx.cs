@@ -12,6 +12,8 @@ namespace Photo_Studio.user
 {
     public partial class usercheckout : System.Web.UI.Page
     {
+
+        private decimal totalprice = (decimal)0.0;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Username"] != null)
@@ -74,6 +76,17 @@ namespace Photo_Studio.user
         {
             GridView1.PageIndex = e.NewPageIndex;
             this.BindGrid();
+        }
+        protected void pricedatabound(object sender, GridViewRowEventArgs e)
+        { 
+            if(e.Row.RowType == DataControlRowType.DataRow)
+            {
+                totalprice += Convert.ToDecimal(DataBinder.Eval(e.Row.DataItem, "Price"));
+            }
+            else if(e.Row.RowType == DataControlRowType.Footer)
+            {
+                TotalPriceLabel.Text = String.Format("{0:c}", totalprice);
+            }
         }
     }
 }
