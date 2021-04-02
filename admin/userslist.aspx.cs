@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace Photo_Studio.admin
 {
@@ -12,6 +15,15 @@ namespace Photo_Studio.admin
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+        protected void GridViewTableListButton_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
+            conn.Open();
+            DataTable t = conn.GetSchema("Tables");
+            GridViewTableList.DataSource = t;
+            GridViewTableList.DataBind();
+            conn.Close();
         }
     }
 }

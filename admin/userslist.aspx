@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NestedAdmin.Master" AutoEventWireup="true" CodeBehind="userslist.aspx.cs" Inherits="Photo_Studio.admin.userslist" %>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">    
     <link href="~/style/LoginStyleSheet.css" rel="stylesheet" type="text/css" />
+    <div>
+    <asp:Button ID="GridViewTableListButton" runat="server" Text="List all Tables on server" 
+        onclick="GridViewTableListButton_Click"  />
+    <asp:GridView ID="GridViewTableList" runat="server">
+    </asp:GridView>
+</div>
     <div class="loginform">
         <fieldset class="loginfield">
                     <legend>Registered Users</legend>
