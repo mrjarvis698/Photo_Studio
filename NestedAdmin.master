@@ -1,14 +1,22 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Login.Master" AutoEventWireup="true" CodeBehind="NestedAdmin.master.cs" Inherits="Photo_Studio.NestedAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style2 {
-            width: 261px;
-            text-align: left;
-            color: #FFFFFF;
-        }
-    </style>
+    .auto-style2 {
+        width: 261px;
+        text-align: left;
+        color: #FFFFFF;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <asp:TreeView ID="TreeView1" runat="server">
+        <Nodes>
+            <asp:TreeNode NavigateUrl="~/admin/AdminHome.aspx" Text="Home" Value="Home"></asp:TreeNode>
+            <asp:TreeNode NavigateUrl="~/admin/addproducts.aspx" Text="Add Products" Value="Add Products"></asp:TreeNode>
+            <asp:TreeNode NavigateUrl="~/admin/OrderList.aspx" Text="Orders" Value="Orders"></asp:TreeNode>
+            <asp:TreeNode NavigateUrl="~/admin/userslist.aspx" Text="Users" Value="Users"></asp:TreeNode>
+        </Nodes>
+    </asp:TreeView>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
@@ -16,12 +24,12 @@
 </asp:Content>
 <asp:Content ID="Content4" runat="server" contentplaceholderid="ContentPlaceHolder3">
     <table class="tableform">
-        <tr>
-            <td class="auto-style2">Welcome! ADMIN</td>
-            <td>
-                <asp:Button ID="Button1" runat="server" CausesValidation="False" PostBackUrl="~/login.aspx" Text="Logout" />
-            </td>
-        </tr>
-    </table>
+    <tr>
+        <td class="auto-style2">Welcome! ADMIN</td>
+        <td>
+            <asp:Button ID="Button1" runat="server" CausesValidation="False" PostBackUrl="~/login.aspx" Text="Logout" />
+        </td>
+    </tr>
+</table>
 </asp:Content>
 
