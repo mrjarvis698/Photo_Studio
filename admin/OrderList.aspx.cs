@@ -23,7 +23,7 @@ namespace Photo_Studio.admin
             string Email = gr.Cells[3].Text;
             SqlConnection connn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
             connn.Open();
-            using (SqlCommand cmmd = new SqlCommand("SELECT ID,ProductName,Description,Price from [dbo].[" + Email + "]"))
+            using (SqlCommand cmmd = new SqlCommand("SELECT ID,ProductImage,ProductName,Description,Price from [dbo].[" + Email + "]"))
             {
                 using (SqlDataAdapter sda = new SqlDataAdapter())
                 {

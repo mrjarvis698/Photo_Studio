@@ -10,7 +10,7 @@
                         Product Image -
                     </td>
                     <td>
-                        <asp:Image ID="ProductImage" runat="server" />
+                        <asp:Image ID="ProductImage" runat="server" Height="209px" Width="300px" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
