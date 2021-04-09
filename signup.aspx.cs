@@ -50,7 +50,8 @@ namespace Photo_Studio
                     query += "[ProductName] NCHAR(20) NOT NULL,";
                     query += "[Description] NCHAR(250) NOT NULL,";
                     query += "[Price] MONEY NOT NULL,";
-                    query += "[Quantity] INT NOT NULL";
+                    query += "[Quantity] INT NOT NULL,";
+                    query += "[OrderStatus] NCHAR(20) NULL";
                     query += ")";
                     query += " END";
                     string constr = ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString;

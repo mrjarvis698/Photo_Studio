@@ -12,6 +12,7 @@
                             <asp:BoundField DataField="Description" HeaderText="Description" />
                             <asp:BoundField DataField="Price" HeaderText="Price" />
                             <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
+                            <asp:BoundField DataField="OrderStatus" HeaderText="OrderStatus" />
                         </Columns>
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
