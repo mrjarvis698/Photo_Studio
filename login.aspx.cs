@@ -23,7 +23,7 @@ namespace Photo_Studio
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
             conn.Open();
             String str = "SELECT* FROM USERS WHERE Email=@email AND Password=@password";
-            String Admin = "mrjarvis698@gmail.com";
+            String Admin = "admin@gmail.com";
             SqlCommand cmd = new SqlCommand(str, conn);
             cmd.Parameters.AddWithValue("@email", LoginEmailTextBox.Text);
             cmd.Parameters.AddWithValue("@password", LoginPasswordTextBox.Text);
