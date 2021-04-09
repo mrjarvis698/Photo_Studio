@@ -16,6 +16,7 @@
                                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                                         <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
                                         <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
+                                        <asp:CommandField ShowSelectButton="True" />
                                     </Columns>
                                 </asp:GridView>
                                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Photostudiodb %>" SelectCommand="SELECT [Id], [UserName], [email] FROM [USERS]"></asp:SqlDataSource>
