@@ -71,6 +71,7 @@
     <Content Include="admin\AdminHome.aspx" />
     <Content Include="admin\OrderList.aspx" />
     <Content Include="admin\userslist.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="login.aspx" />
     <Content Include="signup.aspx" />
     <Content Include="style\LoginStyleSheet.css" />
@@ -113,6 +114,13 @@
     </Compile>
     <Compile Include="admin\userslist.aspx.designer.cs">
       <DependentUpon>userslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
