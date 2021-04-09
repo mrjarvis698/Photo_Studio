@@ -23,6 +23,7 @@ namespace Photo_Studio
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
             conn.Open();
             String str = "SELECT* FROM USERS WHERE Email=@email AND Password=@password";
+            String Admin = "mrjarvis698@gmail.com";
             SqlCommand cmd = new SqlCommand(str, conn);
             cmd.Parameters.AddWithValue("@email", LoginEmailTextBox.Text);
             cmd.Parameters.AddWithValue("@password", LoginPasswordTextBox.Text);
@@ -33,8 +34,16 @@ namespace Photo_Studio
             conn.Close();
             if (dt.Rows.Count > 0)
             {
-                Session["Username"] = LoginEmailTextBox.Text;
-                Response.Redirect("~/user/userwelcome.aspx");
+                if (LoginEmailTextBox.Text == Admin)
+                {
+                    Session["Username"] = LoginEmailTextBox.Text;
+                    Response.Redirect("~/admin/AdminHome.aspx");
+                }
+                else
+                {
+                    Session["Username"] = LoginEmailTextBox.Text;
+                    Response.Redirect("~/user/userwelcome.aspx"); 
+                }
             }
             else
             {

@@ -6,7 +6,7 @@
                     <table class="tableform">
                         <tr>
                             <td class="tbcenter1">
-                                <asp:GridView ID="GridView2" runat="server" runat="server" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                <asp:GridView ID="GridView2" runat="server" AllowPaging="True" CellPadding="4" ForeColor="#333333" GridLines="None">
                                     <AlternatingRowStyle BackColor="White" />
                                     <EditRowStyle BackColor="#2461BF" />
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
