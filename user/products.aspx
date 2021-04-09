@@ -53,6 +53,15 @@
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
+                    <td class="auto-style3" style="text-align: right; width: 194px; height: 23px;">
+                        Upload Image -</td>
+                    <td style="height: 23px">
+                        <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="True" />
+                        <asp:RequiredFieldValidator ID="UserImageUploadRequiredFieldValidator" runat="server" ControlToValidate="FileUpload1" ErrorMessage="*" style="color: #FF0000"></asp:RequiredFieldValidator>
+                    </td>
+                    <td style="height: 23px"></td>
+                </tr>
+                <tr>
                     <td class="auto-style3" style="text-align: right; width: 194px">&nbsp;</td>
                     <td>
                         <asp:Button ID="AddToCartButton" runat="server" OnClick="AddToCartButton_Click" Text="Add to Cart" />

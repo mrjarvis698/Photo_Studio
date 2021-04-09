@@ -29,9 +29,9 @@
                             <asp:Label ID="UsernameLabel" runat="server" ForeColor="White"></asp:Label>
                         </td>
                         <td>
-                            <asp:Button ID="LoginButton" runat="server" PostBackUrl="~/login.aspx" Text="Login" />
-                            <asp:Button ID="LogoutButton" runat="server" PostBackUrl="~/login.aspx" Text="Logout" Visible="False" />
-                            <asp:Button ID="SignupButton" runat="server" PostBackUrl="~/signup.aspx" Text="Signup" />
+                            <asp:Button ID="LoginButton" runat="server" PostBackUrl="~/login.aspx" Text="Login" CausesValidation="False" />
+                            <asp:Button ID="LogoutButton" runat="server" PostBackUrl="~/login.aspx" Text="Logout" Visible="False" CausesValidation="False" />
+                            <asp:Button ID="SignupButton" runat="server" PostBackUrl="~/signup.aspx" Text="Signup" CausesValidation="False" />
                         </td>
                     </tr>
                 </table>

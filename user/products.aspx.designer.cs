@@ -96,6 +96,24 @@ namespace Photo_Studio.user
         protected global::System.Web.UI.WebControls.TextBox QuantityTextBox;
 
         /// <summary>
+        /// FileUpload1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+
+        /// <summary>
+        /// UserImageUploadRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator UserImageUploadRequiredFieldValidator;
+
+        /// <summary>
         /// AddToCartButton control.
         /// </summary>
         /// <remarks>

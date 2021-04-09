@@ -66,11 +66,13 @@ namespace Photo_Studio.user
 
         protected void AddToCartButton_Click(object sender, EventArgs e)
         {
-
+            string strname = FileUpload1.FileName.ToString();
+            FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Users_Dumps/") + strname);
+            string Image = "~/Users_Dumps/" + strname.ToString();
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
             conn.Open();
             string OrderStatus = "Pending.";
-            string query = "INSERT INTO [dbo].[" + Session["Username"] + "] (ProductName,Description,Price,Quantity,OrderStatus) VALUES ('" + ProductNameSqlLabel.Text + "','" + ProductDescriptionSqlLabel.Text + "', '" + ProductPriceSqlLabel.Text + "', '" + QuantityTextBox.Text + "', '" + OrderStatus +"' )";
+            string query = "INSERT INTO [dbo].[" + Session["Username"] + "] (ProductImage,ProductName,Description,Price,Quantity,OrderStatus) VALUES ('" + Image + "','" + ProductNameSqlLabel.Text + "','" + ProductDescriptionSqlLabel.Text + "', '" + ProductPriceSqlLabel.Text + "', '" + QuantityTextBox.Text + "', '" + OrderStatus +"' )";
             string constr = ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString;
             using (SqlConnection connn = new SqlConnection(constr))
             {

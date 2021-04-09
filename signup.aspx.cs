@@ -47,6 +47,7 @@ namespace Photo_Studio
                     query += "BEGIN ";
                     query += "CREATE TABLE [dbo].[" + SignupEmailTextBox.Text + "] (";
                     query += "[Id] INT NOT NULL PRIMARY KEY IDENTITY,";
+                    query += "[ProductImage] VARCHAR(50) NOT NULL,";
                     query += "[ProductName] NCHAR(20) NOT NULL,";
                     query += "[Description] NCHAR(250) NOT NULL,";
                     query += "[Price] MONEY NOT NULL,";
