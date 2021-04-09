@@ -7,6 +7,15 @@
                     <table class="tableform">
                         <tr>
                             <td class="tbleft">
+                                Product Image</td>
+                            <td class="tbcenter">
+                                <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="True" />
+                            </td>
+                            <td class="tbright">
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="tbleft">
                                 <asp:Label ID="AddProductNameLabel" runat="server" Text="Product Name"></asp:Label>
                             </td>
                             <td class="tbcenter">
@@ -66,7 +75,6 @@
                                         <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
                                         <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                                         <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-                                        <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
                                     </Columns>
                                     <EditRowStyle BackColor="#2461BF" />
                                     <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
