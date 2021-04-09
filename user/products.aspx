@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UserNested.Master" AutoEventWireup="true" CodeBehind="products.aspx.cs" Inherits="Photo_Studio.user.products" %>
 <%@ MasterType VirtualPath="~/UserNested.Master" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <p>
-        products.user</p>
     <div class="loginform">
         <fieldset class="auto-style5">
             <legend style="text-align: center">Product View</legend>
