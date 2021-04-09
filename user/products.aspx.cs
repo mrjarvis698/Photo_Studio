@@ -52,11 +52,12 @@ namespace Photo_Studio.user
             {
                 SqlConnection connn = new SqlConnection(ConfigurationManager.ConnectionStrings["Photostudiodb"].ConnectionString);
                 connn.Open();
-                SqlCommand cmdd = new SqlCommand("SELECT Description from PRODUCTS where Id=" + gr.Cells[0].Text, connn);
+                SqlCommand cmdd = new SqlCommand("SELECT ProductImage,Description from PRODUCTS where Id=" + gr.Cells[0].Text, connn);
                 using (SqlDataReader sdr = cmdd.ExecuteReader())
                 {
                     sdr.Read();
                     ProductDescriptionSqlLabel.Text = sdr["Description"].ToString();
+                    ProductImage.ImageUrl = sdr["ProductImage"].ToString();
                 }
 
                 connn.Close();

@@ -9,6 +9,15 @@
             <table class="tableform">
                 <tr>
                     <td class="auto-style3" style="text-align: right; width: 194px">
+                        Product Image -
+                    </td>
+                    <td>
+                        <asp:Image ID="ProductImage" runat="server" />
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style3" style="text-align: right; width: 194px">
                         <asp:Label ID="ProductNameLabel" runat="server">Product Name -</asp:Label>
                     </td>
                     <td>

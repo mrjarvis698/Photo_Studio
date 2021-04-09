@@ -15,6 +15,15 @@ namespace Photo_Studio.user
     {
 
         /// <summary>
+        /// ProductImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ProductImage;
+
+        /// <summary>
         /// ProductNameLabel control.
         /// </summary>
         /// <remarks>
